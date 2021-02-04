@@ -1,0 +1,21 @@
+Options -Indexes 
+RewriteEngine on
+ErrorDocument 404 /SliderScript/admin/index.php
+
+DirectoryIndex index.php?pr=home
+
+RewriteRule ^login$ login.php [L,QSA]
+RewriteRule ^logout$ ajax.php?pr=logout [L,QSA]
+
+RewriteRule ^home$ index.php?pr=home [L,QSA]
+RewriteRule ^slider-contents$ index.php?pr=slider-contents [L,QSA]
+RewriteRule ^slider-contents-a$ ajax.php?pr=slider-contents [L,QSA]
+RewriteRule ^slider-settings$ index.php?pr=slider-settings [L,QSA]
+RewriteRule ^slider-settings-a$ ajax.php?pr=slider-settings [L,QSA]
+RewriteRule ^add-slider-content$ index.php?pr=add-slider-content [L,QSA]
+RewriteRule ^add-slider-content-a$ ajax.php?pr=add-slider-content [L,QSA]
+RewriteRule ^edit-slider-content-([0-9]+)$ index.php?pr=edit-slider-content&id=$1 [L,QSA]
+RewriteRule ^edit-slider-content-a$ ajax.php?pr=edit-slider-content [L,QSA]
+RewriteRule ^delete-slider-content-a$ ajax.php?pr=delete-slider-content [L,QSA]
+
+RewriteRule ^access-logs$ ajax.php?pr=access-logs [L,QSA]
